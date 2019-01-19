@@ -50,6 +50,11 @@ file_path = '/Users/mj/Repos/forexml/data/EUR_USD.M1.out'
 col_names = ['time','open', 'high', 'low', 'close', 'volume', 'complete']
 df = pd.read_csv(filepath_or_buffer=file_path, names=col_names)
 
+df.set_index(['time'], inplace=True)
+plt.plot(df['close'])
+plt.show()
+plt.close()
+
 # close = df['close']
 #
 # span0 = 100
